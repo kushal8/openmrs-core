@@ -169,8 +169,8 @@ public final class Listener extends ContextLoader implements ServletContextListe
 				servletContext.setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, context);
 				try {
 					Context.openSession();
-					Context.authenticate("admin", "Admin123");
-					PersonName.setFormat(Context.getAdministrationService().getGlobalProperty(OpenmrsConstants.GLOBAL_PROPERTY_LAYOUT_NAME_FORMAT));
+					PersonName.setFormat(Context.getAdministrationService().getGlobalProperty(
+					    OpenmrsConstants.GLOBAL_PROPERTY_LAYOUT_NAME_FORMAT));
 				}
 				finally {
 					Context.closeSession();
